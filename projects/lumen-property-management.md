@@ -2,7 +2,7 @@
 
 [Back to portfolio](../README.md)
 
-**[Watch the Lumen project walkthrough](../videos/lumen-project-walkthrough.mp4)** (3 minutes). The video uses selected, cropped footage from an earlier demonstration with neutral narration.
+**[Watch the Lumen project walkthrough](../videos/lumen-project-walkthrough.mp4)** (3 minutes). The video uses selected, cropped footage from an earlier demonstration with narration generated from my voice.
 
 Lumen brings property, lease, rent and maintenance information into one system. I built workflows that help owners work with their records and help tenants report issues, while keeping access checks and review steps in the application.
 
