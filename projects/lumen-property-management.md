@@ -2,13 +2,23 @@
 
 [Back to portfolio](../README.md)
 
+**[Watch the Lumen project walkthrough](../videos/lumen-project-walkthrough.mp4)** (3 minutes). The video uses selected, cropped footage from an earlier demonstration with neutral narration.
+
 Lumen brings property, lease, rent and maintenance information into one system. I built workflows that help owners work with their records and help tenants report issues, while keeping access checks and review steps in the application.
 
 **Stack:** Next.js and TypeScript for the web application; NestJS for the API; Supabase/PostgreSQL for data; Python, Telegram and Gemini Live for the voice bridge; WhatsApp and Stripe integrations for payment-related workflows.
 
+![Cropped dashboard from an earlier project demonstration](../assets/lumen-dashboard.png)
+
+*Dashboard from an earlier recorded demonstration. The screen has been cropped to exclude meeting participants and account details.*
+
 ## 1. Owner assistant and external tool access
 
 An owner can ask questions about their portfolio using tools that retrieve relevant information. For supported record changes, the assistant creates a proposal for review instead of immediately applying the change. The owner or manager can inspect and decide on the proposal.
+
+![Cropped owner assistant interface](../assets/lumen-owner-assistant.png)
+
+*Owner assistant interface from the recorded demonstration.*
 
 The web assistant uses shared tools directly inside the application. For external AI clients, Lumen also exposes those tools through an authenticated Model Context Protocol (MCP) endpoint. The server derives the organisation and permissions from the authenticated caller rather than letting the model choose an organisation.
 
@@ -44,11 +54,29 @@ This excerpt shows one control in the proposal workflow. Other operations have t
 
 The platform integrates WhatsApp rent communication and Stripe payment evidence into a review workflow. External evidence is recorded for review, and the payment review service applies an approved change to the canonical rent payment record. This separates an incoming claim or external event from the landlord's reviewed record, and keeps the review and payment update together in a database transaction.
 
+The recorded demonstration also shows a tenant saying they intend to pay the following day. The response confirms that the promise was recorded while the payment stays overdue until verified. The corresponding owner screen displays the active promise and outstanding payment separately.
+
+![Cropped WhatsApp conversation showing a payment promise](../assets/lumen-whatsapp-promise.png)
+
+![Cropped payment promise record in the owner interface](../assets/lumen-payment-promise.png)
+
+*These excerpts show the promise-to-pay example from the recording, not proof that payment was completed. The recording used an earlier interface name.*
+
+The same demonstration also shows a separate payment example: one notification says a Stripe payment has been detected and awaits landlord verification, while another confirms receipt. The screenshots below are cropped and redacted to remove identifying details and receipt links.
+
+![Redacted notification that payment evidence awaits verification](../assets/lumen-payment-detected.png)
+
+![Redacted notification confirming a payment receipt](../assets/lumen-payment-received.png)
+
+*Recorded demonstration messages, not an assertion of a live production transaction.*
+
 **Demonstration status:** The WhatsApp payment workflow was recorded during the service trial. The trial has expired, so that integration is not presented here as currently available for a live demonstration.
 
 ## 3. Tenant maintenance by Telegram voice
 
 The Python bridge connects a Telegram voice call to the application and Gemini Live. The incoming maintenance flow checks the tenant's linked identity and current lease, gathers the issue, prepares a report draft and reads the details back. The design requires an explicit affirmative response after the readback before submitting the report. Existing tickets and troubleshooting information can also be considered during the conversation.
+
+![Cropped maintenance status summary](../assets/lumen-maintenance-status.png)
 
 ```mermaid
 flowchart LR
