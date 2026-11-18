@@ -1,48 +1,25 @@
-# Teh Ro-Vin | AI Automation Portfolio
+# Teh Ro-Vin | Project Portfolio
 
-I build AI-assisted applications that connect language models with practical workflows, authenticated tools and business systems. My work combines application development, agent orchestration, integration and structured evaluation.
+I build software that connects practical business workflows with useful, carefully controlled automation. This portfolio presents two projects, with a closer look at their architecture, implementation choices and testing.
 
-This showcase presents two selected projects from my resume. Their full source repositories remain private; the descriptions below focus on the work I can discuss in a technical walkthrough.
+## Selected projects
 
-## Lumen Property Management System
+### [Lumen Property Management System](projects/lumen-property-management.md)
 
-A property management platform that brings together tenant, lease, rent payment, expense and maintenance information, with AI-assisted workflows for owners and tenants.
+A property management platform with owner-facing tools, payment review and a tenant maintenance voice workflow. The case study follows how an assistant accesses organisation-scoped data, proposes changes for review and handles maintenance calls.
 
-**Selected automation and integration work**
+**Highlights:** Next.js, NestJS, PostgreSQL, MCP, WhatsApp, Telegram, Python and Gemini Live.
 
-- Built a tool-calling owner assistant and MCP server to answer portfolio questions and propose record changes, with organisation-scoped access and owner approval.
-- Integrated WhatsApp rent enquiries and Stripe payment evidence into a landlord review workflow, keeping payment claims separate from approved payment records.
-- Developed a Telegram voice assistant using Gemini Live and a Python audio bridge to collect maintenance reports, verify tenant context and request confirmation before ticket submission.
+[Explore the Lumen case study](projects/lumen-property-management.md)
 
-**Technology:** TypeScript, Next.js, NestJS, Supabase/PostgreSQL, MCP, Python, Gemini Live and external messaging/payment integrations.
+### [UTAR Sport Facility](projects/utar-sport-facility.md)
 
-**Demonstration:** The Telegram voice flow was tested. The WhatsApp payment workflow was recorded on video during its service trial; live availability depends on third-party services.
+My individual final-year project combines facility booking and payment workflows with an assistant that can check availability, cite information sources and use account-scoped tools. The case study includes interface screenshots, booking state transitions, selected code and a controlled memory evaluation.
 
-## UTAR Sport Facility | Individual Final-Year Project
+**Highlights:** React Native, Expo, Firebase, Python, FastAPI, LangGraph, LangChain and Langfuse.
 
-An application for sports facility booking, payment workflows, matchmaking and recommendations, with an AI assistant that uses authenticated tools and user-scoped memory.
+[Explore the Sport Facility case study](projects/utar-sport-facility.md) | [Review the memory evaluation](evaluation/memory-selection.md)
 
-**Selected AI and automation work**
+## About the evidence
 
-- Built the application with React Native/Expo and Firebase, and developed a Python/FastAPI agent using LangGraph.
-- Connected the agent to authenticated tools and booking workflows, with user confirmation before a booking action.
-- Implemented persistent user-scoped memory and hybrid retrieval-augmented generation, then used self-hosted Langfuse on Docker to track evaluations and traces.
-
-**Controlled memory evaluation**
-
-| Metric | Result |
-| --- | --- |
-| Memory selection precision | 80.95% (17 / 21 selected items relevant) |
-| Target-memory hit@3 | 16 / 16 positive queries |
-| Micro recall and micro-F1 | 100% and 89.47%, respectively |
-| Memory-write authorisation checks | 14 / 14 passed |
-
-These figures come from a small, controlled offline evaluation. They describe the tested cases and should not be interpreted as production accuracy or real-world user outcomes. See the [evaluation method and limitations](evaluation/memory-selection.md).
-
-**Technology:** Python, FastAPI, LangGraph, LangChain, React Native, Expo, Firebase, Langfuse and Docker.
-
-## How I approach AI automation
-
-I focus on understanding the underlying workflow, connecting tools through clear interfaces, validating inputs and permissions, and measuring how the system behaves. Where an action can change a record or submit a request, I use explicit confirmation or a review step appropriate to the workflow.
-
-Project walkthroughs and demonstrations can be discussed on request. Full source code is not published in this showcase.
+The complete project repositories are private. This public showcase contains selected short excerpts, cropped interface screenshots and aggregate evaluation results. Screenshots and controlled evaluations demonstrate specific behaviours at the time they were captured; they are not evidence of current service availability or production-wide performance. I can discuss the design and demonstrate the projects during an interview.

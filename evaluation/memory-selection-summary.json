@@ -1,0 +1,11 @@
+{
+  "description": "Aggregate counts from the controlled offline memory evaluation; not the original dataset.",
+  "selection_queries": 25,
+  "true_positive": 17,
+  "false_positive": 4,
+  "false_negative": 0,
+  "positive_queries": 16,
+  "positive_queries_with_top_3_hit": 16,
+  "memory_write_authorisation_cases": 14,
+  "memory_write_authorisation_passed": 14
+}

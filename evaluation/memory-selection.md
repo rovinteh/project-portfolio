@@ -15,3 +15,7 @@ This page explains the selected memory evaluation results shown in the portfolio
 The ranking hit rate, item-level micro metrics and authorisation checks answer different questions. The micro counts above are based on effective memories after the memory gate; the query-level hit@3 is based on the ranker's output before the gate.
 
 The sample is small and the data is controlled. These results do not establish performance on unseen production traffic, overall assistant accuracy, real-world security or user satisfaction. The original source code and raw cases are not published as part of this showcase.
+
+## Check the arithmetic
+
+The [aggregate counts](memory-selection-summary.json) and [calculation script](../examples/recalculate-memory-metrics.py) let a reader check the reported precision, recall and F1. Run `python examples/recalculate-memory-metrics.py` from the portfolio root. The script recalculates the published counts; it does not rerun the private evaluation or independently validate the underlying dataset.
